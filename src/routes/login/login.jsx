@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../../components/header/header';
 import styles from './login.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle,faGithub } from '@fortawesome/free-brands-svg-icons';
 const Login = ({authService}) => {
     const navigator = useNavigate();
     const goToHome = (data)=>{
@@ -18,20 +21,20 @@ const Login = ({authService}) => {
         });
     });
     return(
-        <section className={styles.login}>
-            <section>
-                <h1>Login</h1>
+        <div className={styles.wrap}>
+            <Header/>
+            <section className={styles.login}>
+                <h1 className={styles.loginTitle}>Login</h1>
                 <ul className={styles.list}>
                     <li className={styles.item}>
-                        <button onClick={onLogin} className={styles.button}>Google</button>
+                        <button onClick={onLogin} className={styles.button}><FontAwesomeIcon icon={faGoogle} />Google</button>
                     </li>
-
                     <li className={styles.item}>
-                        <button onClick={onLogin} className={styles.button}>Github</button>
+                        <button onClick={onLogin} className={styles.button}><FontAwesomeIcon icon={faGithub} />Github</button>
                     </li>
                 </ul>
             </section>
-        </section>
+        </div>
     );
 };
 

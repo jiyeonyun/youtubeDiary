@@ -1,0 +1,14 @@
+.header{
+    width: 100%;
+    display: flex;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: space-between;
+}
+.headerIcon{
+    font-size: 1.2rem;
+}
+.headerTime{
+    font-size: 1.1rem;
+    font-weight: bold;
+}

@@ -1,0 +1,36 @@
+.cardWrap{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.logout{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.profileWrap{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.photo{
+    border-radius: 50%;
+    width: 5rem;
+}
+.nameWrap{
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+.name{
+    font-size: 1.2rem;
+    margin: 0 1rem 0 1rem;
+    font-weight: bold;
+}
+.button{
+    border: none;
+    margin-right: 3rem;
+}
