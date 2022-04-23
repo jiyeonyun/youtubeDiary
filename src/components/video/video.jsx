@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './video.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark,faFilePen } from '@fortawesome/free-solid-svg-icons';
+
 const Video = ({videoItem,onVideoClick}) => {
     let length = 35; 
     let str = videoItem.snippet.title;

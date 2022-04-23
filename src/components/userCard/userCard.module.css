@@ -12,6 +12,15 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
+    border: none;
+    background-color: transparent;
+    color: rgb(107, 107, 107);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.logout:hover{
+    color: #999;
+    transform: scale(1.04);
 }
 .profileWrap{
     display: flex;
@@ -24,14 +33,28 @@
 }
 .nameWrap{
     margin-left: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 .name{
     font-size: 1.2rem;
     margin: 0 1rem 0 1rem;
     font-weight: bold;
 }
+.buttonWrap{
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+
+}
 .button{
     border: none;
-    margin-right: 3rem;
+    margin-right: 0.5rem;
+    background-color: transparent;
+    color: rgb(255, 132, 0);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.05);
+    color: rgb(255, 170, 0);
 }

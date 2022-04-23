@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './videoPlayer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown,faArrowUp } from '@fortawesome/free-solid-svg-icons';
 const VideoPlayer = ({video,video:{snippet}}) =>{
     const[des,setdes] = useState(false);
     const click = ()=>{
@@ -22,7 +22,9 @@ const VideoPlayer = ({video,video:{snippet}}) =>{
             <h2 className={styles.title}>{snippet.title}</h2>
             <h3 className={styles.channelTitle}>{snippet.channelTitle}</h3>
             <button className={styles.button} onClick={click}>
-                <FontAwesomeIcon icon={faArrowDown} />
+                {
+                    des ?<FontAwesomeIcon icon={faArrowUp} />  :<FontAwesomeIcon icon={faArrowDown} />
+                }
             </button>
             {
                 des && <pre className={styles.description}>{snippet.description}</pre>
