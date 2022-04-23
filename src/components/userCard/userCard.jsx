@@ -3,7 +3,15 @@ import styles from './userCard.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOut  } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark,faBook } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 const UserCard = ({name,photo,onLogout}) => {
+    const navigator = useNavigate();
+    const goBookMark = ()=>{
+        navigator('/bookmark');
+    };
+    const goDiary = ()=>{
+        navigator('/diary');
+    };
         return(
             <div className={styles.cardWrap}>
                     {onLogout && (<button className={styles.logout} onClick={onLogout}><FontAwesomeIcon icon={faSignOut} /></button>)}
@@ -12,8 +20,8 @@ const UserCard = ({name,photo,onLogout}) => {
                     <p className={styles.nameWrap}>안녕하세요 <span className={styles.name}>{name}</span> 님</p>
                 </div>
                 <div className={styles.buttonWrap}>
-                    <button className={styles.button}><FontAwesomeIcon icon={faBookmark} /></button>
-                    <button className={styles.button}><FontAwesomeIcon icon={faBook} /></button>
+                    <button onClick={goBookMark} className={styles.button}><FontAwesomeIcon icon={faBookmark} /></button>
+                    <button onClick={goDiary} className={styles.button}><FontAwesomeIcon icon={faBook} /></button>
                 </div>
             </div>
         );
