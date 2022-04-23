@@ -4,6 +4,7 @@
     background-color: whitesmoke;
     align-items: center;
     justify-content: space-between;
+    height: 2rem;
 }
 .headerIcon{
     font-size: 1.2rem;

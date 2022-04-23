@@ -1,0 +1,26 @@
+.detail{
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.title{
+    font-size: 1.2rem;
+}
+.channelTitle{
+    font-size: 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+}
+.description{
+    font-size: 0.7rem;
+    overflow: auto;
+    white-space: pre-wrap;
+    animation: fade 1s ;
+}
+@keyframes fade{
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

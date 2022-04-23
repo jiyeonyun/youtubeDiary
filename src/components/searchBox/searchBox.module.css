@@ -1,0 +1,14 @@
+.SearchBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.input{
+    width: 60%;
+    height: 2rem;
+}
+.button{
+    height: 2rem;
+}
