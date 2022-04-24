@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
 import styles from './app.module.css';
 import Login from './routes/login/login';
 import Home from './routes/home/home';

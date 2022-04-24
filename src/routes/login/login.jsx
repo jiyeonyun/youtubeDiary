@@ -24,15 +24,22 @@ const Login = ({authService}) => {
         <div className={styles.wrap}>
             <Header/>
             <section className={styles.login}>
+                <div className={styles.loginImage}>
+                    <img className={styles.img} src="./assets/diary.jpeg" alt="" />
+                    <p className={styles.loginP}>캡쳐대신 기록하고싶다면</p>
+                    <h4 className={styles.lodinh4}>Youtube Diary</h4>
+                </div>
+                <div className={styles.ulWrap}>
                 <h1 className={styles.loginTitle}>Login</h1>
-                <ul className={styles.list}>
-                    <li className={styles.item}>
-                        <button onClick={onLogin} className={styles.button}><FontAwesomeIcon icon={faGoogle} />Google</button>
-                    </li>
-                    <li className={styles.item}>
-                        <button onClick={onLogin} className={styles.button}><FontAwesomeIcon icon={faGithub} />Github</button>
-                    </li>
-                </ul>
+                    <ul className={styles.list}>
+                        <li className={styles.item}>
+                            <button onClick={onLogin} className={styles.button}><FontAwesomeIcon icon={faGoogle} />Google</button>
+                        </li>
+                        <li className={styles.item}>
+                            <button onClick={onLogin} className={styles.button}><FontAwesomeIcon icon={faGithub} />Github</button>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div>
     );

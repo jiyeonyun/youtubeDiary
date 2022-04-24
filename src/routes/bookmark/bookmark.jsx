@@ -1,14 +1,21 @@
 import React from 'react';
 import Header from '../../components/header/header';
-
-const Bookmark = ({authService,youtube}) => {
-    
+import {connect} from 'react-redux';
+import BookmarkItem from '../../components/bookmarkItem/bookmarkItem';
+const Bookmark = ({authService,youtube,props}) => {
+    const item = props.state;
     return(
-        <>
+        <div>
         <Header/>
-        bookmark
-        </>
+        { item &&
+            item.map((a)=>{
+                return( <BookmarkItem item={a} youtube={youtube} authService={authService}/>)
+            })
+        }
+        </div>
     );
 };
-
-export default Bookmark;
+function connec(state){
+    return {state : state}
+}  
+export default connect(connec)(Bookmark);
