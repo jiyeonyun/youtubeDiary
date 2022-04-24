@@ -9,7 +9,7 @@ const BookmarkItem = ({item,youtube,authService}) => {
 
     return(
         <li className={styles.li}>
-        {/* <img className={styles.img} src={item.img} alt="" />
+        <img className={styles.img} src={item.img} alt="" />
         <div className={styles.desWrap}>
             <p className={styles.title}>{item.name.length>length? item.name.substr(0, length - 2) + '...' :item.name}</p>
             <p className={styles.channelName}>{item.channelName}</p>
@@ -18,7 +18,7 @@ const BookmarkItem = ({item,youtube,authService}) => {
         <div className={styles.buttons}>
             <button className={styles.button}><FontAwesomeIcon className={styles.icon} icon={faBookmark} /></button>
             <button className={styles.button}><FontAwesomeIcon  icon={faFilePen} /></button>
-        </div> */}
+        </div>
     </li>
     );
 };

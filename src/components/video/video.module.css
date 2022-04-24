@@ -9,6 +9,7 @@
     padding: 0.6rem;
     border-radius: 1rem;
     cursor: pointer;
+    z-index: 1;
 }
 .li:hover{
     transform: scale(1.02);
@@ -17,6 +18,7 @@
     position: absolute;
     right: 0.5rem;
     bottom: 0.5rem;
+    z-index: 2;
 }
 .img{
     width: 40%;
@@ -41,6 +43,6 @@
     font-size: 1.2rem;
     color: #999;
 }
-/* .icon{
-    background-color: rgb(255, 183, 0);
-} */
+.icon{
+    pointer-events: none;
+}

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './videoPlayer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown,faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faFilePen } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 const VideoPlayer = ({video,video:{snippet}}) =>{
     const[des,setdes] = useState(false);
     const click = ()=>{
