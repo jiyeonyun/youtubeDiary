@@ -6,6 +6,7 @@ import SearchBox from '../../components/searchBox/searchBox';
 import UserCard from '../../components/userCard/userCard';
 import Video from '../../components/video/video';
 import VideoPlayer from '../../components/videoPlayer/videoPlayer'
+
 const Home = ({youtube,authService}) => {
     const[videos, setVideos] = useState([]);
     const navigatorState = useNavigate().state;

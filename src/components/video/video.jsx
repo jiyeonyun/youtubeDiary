@@ -1,14 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './video.module.css';
-import {connect, useDispatch} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePen } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
+import { dbService } from '../../service/mybase';
+import { collection, addDoc } from "firebase/firestore";
 const Video = ({videoItem,onVideoClick}) => {
+    const savedVideos = useSelector(state=>state);
     const clicked = false;
     const dispatch = useDispatch();
     let length = 35; 
     let str = videoItem.snippet.title;
+    const saveDatabase = async()=>{
+        const savedVideo = {
+            name:str,
+            channelName:videoItem.snippet.channelTitle,
+            date:videoItem.snippet.publishedAt,
+            img:videoItem.snippet.thumbnails.medium.url,
+            id: new Date()
+        }
+        await addDoc(collection(dbService,"savedVideos"),savedVideo);
+    }
     const saveVideo = ()=>{
         dispatch({type:'Add', payload :{
             name:str,
@@ -18,6 +31,7 @@ const Video = ({videoItem,onVideoClick}) => {
             id: new Date()
         }})
     };
+
     return(
         <li className={styles.li} onClick={(e)=>e.target.value !== 'button' && onVideoClick(videoItem)}>
             <img className={styles.img} src={videoItem.snippet.thumbnails.medium.url} alt="" />
@@ -25,7 +39,7 @@ const Video = ({videoItem,onVideoClick}) => {
                 <button value='button' onClick={()=>{
                     if(clicked === false){
                         saveVideo();
-                    
+                        saveDatabase();
                     }
                     else if(clicked ===true){
                     
@@ -45,9 +59,5 @@ const Video = ({videoItem,onVideoClick}) => {
         </li>
     );
 };
-function connec(state){
-    return {
-            state : state
-        }
-}  
-export default connect(connec)(Video);
+
+export default Video;
