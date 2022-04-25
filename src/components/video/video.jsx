@@ -11,6 +11,7 @@ const Video = ({videoItem,onVideoClick}) => {
     const dispatch = useDispatch();
     const [modalOn,setModalOn] = useState(false);
     const[clicked,setClicked] = useState(false);
+    const[write,setWrite]=useState('');
     let length = 35; 
     let str = videoItem.snippet.title;
     const saveDatabase = async()=>{
@@ -19,7 +20,8 @@ const Video = ({videoItem,onVideoClick}) => {
             channelName:videoItem.snippet.channelTitle,
             date:videoItem.snippet.publishedAt,
             img:videoItem.snippet.thumbnails.medium.url,
-            id: new Date()
+            id: new Date(),
+            write: write,
         }
         await addDoc(collection(dbService,"savedVideos"),savedVideo);
     }
@@ -30,8 +32,15 @@ const Video = ({videoItem,onVideoClick}) => {
             date:videoItem.snippet.publishedAt,
             img:videoItem.snippet.thumbnails.medium.url,
             id: new Date(),
-            clicked: true
+            write: write,
+            clicked:true,
         }})
+    };
+    const onChange = (event)=>{
+        const{
+            target: {value},
+        } = event;
+        setWrite(value);
     };
     const Modal = ()=>{
         setModalOn(!modalOn)
@@ -63,7 +72,7 @@ const Video = ({videoItem,onVideoClick}) => {
             {
                 modalOn && 
                 <div className={styles.modal}>
-                <WriteModal/>
+                <WriteModal onChange={onChange}/>
                 </div>
             }
         </li>

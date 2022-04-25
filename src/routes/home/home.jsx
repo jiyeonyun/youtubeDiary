@@ -43,7 +43,7 @@ const Home = ({youtube,authService}) => {
                 navigator('/');
             }
         });
-    },[userId,authService])
+    },[userId,authService]);
         return(
             <div>
                 <Header/>

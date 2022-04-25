@@ -9,9 +9,6 @@ const UserCard = ({name,photo,onLogout}) => {
     const goBookMark = ()=>{
         navigator('/bookmark');
     };
-    const goDiary = ()=>{
-        navigator('/diary');
-    };
         return(
             <div className={styles.cardWrap}>
                     {onLogout && (<button className={styles.logout} onClick={onLogout}><FontAwesomeIcon icon={faSignOut} /></button>)}
@@ -21,7 +18,6 @@ const UserCard = ({name,photo,onLogout}) => {
                 </div>
                 <div className={styles.buttonWrap}>
                     <button onClick={goBookMark} className={styles.button}><FontAwesomeIcon icon={faBookmark} /></button>
-                    <button onClick={goDiary} className={styles.button}><FontAwesomeIcon icon={faBook} /></button>
                 </div>
             </div>
         );

@@ -8,7 +8,17 @@
 .input{
     width: 60%;
     height: 2rem;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 1rem;
 }
 .button{
     height: 2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.1);
 }
