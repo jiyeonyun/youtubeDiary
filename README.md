@@ -9,47 +9,63 @@
 <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=flat-square&logo=Yarn&logoColor=white"/>
 <img src="https://img.shields.io/badge/FireBase-FFCA28?style=flat-square&logo=FireBase&logoColor=white"/>
 <br>
-<img width="487" alt="main" src="https://user-images.githubusercontent.com/94913420/162649836-b2ea02b6-791c-489f-af24-194c0e9bbe98.png">
-
 
  *** 
  
  매번 유튜브에서 유용한 내용이 있으면 캡쳐를 해두고 다시는 안봐서 기록하는 어플을 만들어보았습니다.<br>
- 앞으로 추가할 내용은 날짜별 저장된 영상구분 카테고리별 구분을 업데이트 할 예정입니다.
+ 앞으로 추가할 내용은 날짜별 저장된 영상구분 카테고리별 구분을 업데이트 할 예정입니다.<br>
+ firebase를 이용해 로그인기능을 사용하였고, firebase의 데이터 베이스를 이용해 데이터를 저장하였습니다.<br>
+ 유튜브 api를 사용하여 유튜브 정보르 받아 왔습니다.
 
 ## 상세 페이지
 
 ### 메인화면
 <br><br><br>
-<img width="487" alt="main" src="https://user-images.githubusercontent.com/94913420/162649836-b2ea02b6-791c-489f-af24-194c0e9bbe98.png">
+<img width="488" alt="스크린샷 2022-04-25 오후 6 45 38" src="https://user-images.githubusercontent.com/94913420/165065842-cefc7ff3-8b87-438e-bef5-a9fc1cc1ba6b.png">
 
 <br><br>
 실행시 화면입니다.<br>
-지출금액, 수입금액,총계와 추가버튼 캘린더 버튼이있습니다.
+firebase인증을 사용하여 깃허브 또는 구글로 로그인 할 수 있습니다.
 
 <br><br><br>
 ### 상세 기능
 <br><br><br>
-<img width="421" alt="m" src="https://user-images.githubusercontent.com/94913420/162649851-b2b336e8-ce1c-42db-b7bc-6985c37ade11.png">
-<img width="430" alt="p" src="https://user-images.githubusercontent.com/94913420/162649854-83b0002a-1eb4-4862-8d1e-9548a6e93fb1.png">
-플러스 버튼을 누르면 내역을 추가할 수 있습니다<br>
-지출 수입 버튼을 누르면 각각의 버튼의 색상이 바뀝니다<br>
+<img width="487" alt="스크린샷 2022-04-25 오후 6 46 05" src="https://user-images.githubusercontent.com/94913420/165065863-621ec086-b559-4678-8fae-29ccced34ae9.png"><br>
+구글이나 깃허브에서 받아온 유저 정보로 유저의 프로필과 이름을 보여줍니다.<br>
+로그아웃버튼과 북마크 버튼을 배치하여 로그아웃을 할수있고, 북마크페이지로 이동 가능합니다.<br>
+유튜브 api를 사용해 현재 한국의 인기 영상을 배치했습니다.
 <br><br><br>
 
-### 추가,삭제,테마설정
-<img width="483" alt="minusadd" src="https://user-images.githubusercontent.com/94913420/162649842-ef07abae-fbaf-4eb0-bd6b-5ff69f54dd59.png">
-<br><br>
-<img width="464" alt="allad" src="https://user-images.githubusercontent.com/94913420/162649846-51d2bf78-6a3c-43ae-8abe-3a0e514dbf88.png">
-<br><br>
-수입과 지출을 기록했습니다.
+<img width="469" alt="스크린샷 2022-04-25 오후 6 46 15" src="https://user-images.githubusercontent.com/94913420/165065880-77da929e-c505-407a-8708-c96aeea1b0ee.png">
 <br>
-수입내역과 지출내역 각각에 누적이 됩니다. 수입과 지출을 더해 총계를 냅니다.
-<br><br><br>
-<img width="402" alt="select" src="https://user-images.githubusercontent.com/94913420/162649848-65add00c-2d12-4408-a342-7e02ea066518.png">
+<img width="483" alt="스크린샷 2022-04-25 오후 6 46 50" src="https://user-images.githubusercontent.com/94913420/165065896-9549c590-280e-4bce-bc4c-bfb6e6a5ceba.png">
 <br><br>
-종류는 선택할수 있습니다.
-<br><br><br>
-<img width="478" alt="cal" src="https://user-images.githubusercontent.com/94913420/162649856-70480d20-7084-491c-ac9e-43ceb33f871f.png">
-<br><br><br>
-캘린더 버튼입니다. <br>
+우측 하단의 북마크 버튼을 누르면 firebase데이터 베이스로 데이터를 전달시킵니다.<br>
+데이터를 사용할때는 redux를 이용하였습니다<br>
+코멘트를 적어 저장할 수있고, 코멘트 없이 저장할수도 있습니다.<br><br><br>
+<img width="482" alt="스크린샷 2022-04-25 오후 6 47 19" src="https://user-images.githubusercontent.com/94913420/165065905-4693db21-3e70-4b66-b01c-0df078cc050f.png">
+<br>
+<img width="460" alt="스크린샷 2022-04-25 오후 6 47 26" src="https://user-images.githubusercontent.com/94913420/165065912-243df580-409f-464a-98d4-09a2f5c59baa.png">
+<br><br>
+북마크 페이지 입니다. 저장한 영상들이 있습니다.
+댓글표시를 누르면 아까 적었던 코멘트와 함께 뜹니다. <br><br><br>
+<img width="485" alt="스크린샷 2022-04-25 오후 6 47 52" src="https://user-images.githubusercontent.com/94913420/165065924-5d962628-486f-4952-96e3-3776ac0ae849.png">
+<br><br>
+전부 선택하면 북마크가 비어있다고 알려줍니다.
+<br><br>
+
+<img width="482" alt="스크린샷 2022-04-25 오후 6 48 11" src="https://user-images.githubusercontent.com/94913420/165065941-150571d8-8ce7-4f05-be9d-8ff0121d39da.png">
+<br>
+<img width="484" alt="스크린샷 2022-04-25 오후 6 48 28" src="https://user-images.githubusercontent.com/94913420/165065950-96ffe037-fd24-49c3-97b7-02bf7ed8b97e.png">
+<br><br>
+
+검색기능을 사용해서 영상을 저장할 수 도 있습니다.<br>
+영상을 클릭하며 영상이 플레이됩니다.<br><br><br>
+
+<img width="490" alt="스크린샷 2022-04-25 오후 6 48 46" src="https://user-images.githubusercontent.com/94913420/165065963-b0202fe2-9719-418a-a6fe-aefce72b4fbc.png">
+<img width="479" alt="스크린샷 2022-04-25 오후 6 48 56" src="https://user-images.githubusercontent.com/94913420/165065980-0246e1ab-dcda-4b8f-b626-55514727433b.png">
+<br><br>
+
+-------------------------------------------------------------------------
++추가할기능 1.카테고리별로 나누기 2.영상하단에서도 메모가능하게 만들기 3. 저장된 날짜별로 나누기
 
