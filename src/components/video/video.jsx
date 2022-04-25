@@ -5,12 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePen } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { dbService } from '../../service/mybase';
-import { collection, addDoc } from "firebase/firestore";
+import {  deleteDoc, getFirestore, doc, collection, addDoc } from "firebase/firestore";
 const Video = ({videoItem,onVideoClick}) => {
-    const savedVideos = useSelector(state=>state);
-    const clicked = false;
     const dispatch = useDispatch();
     let length = 35; 
+    const[clicked,setClicked] = useState(false);
     let str = videoItem.snippet.title;
     const saveDatabase = async()=>{
         const savedVideo = {
@@ -28,7 +27,8 @@ const Video = ({videoItem,onVideoClick}) => {
             channelName:videoItem.snippet.channelTitle,
             date:videoItem.snippet.publishedAt,
             img:videoItem.snippet.thumbnails.medium.url,
-            id: new Date()
+            id: new Date(),
+            clicked: true
         }})
     };
 
@@ -40,12 +40,10 @@ const Video = ({videoItem,onVideoClick}) => {
                     if(clicked === false){
                         saveVideo();
                         saveDatabase();
-                    }
-                    else if(clicked ===true){
-                    
+                        setClicked(!clicked);
                     }
                 }} className={styles.button}>
-                {clicked? <i className="fa-solid fa-bookmark"></i>
+                {clicked? <i className="icon fa-solid fa-bookmark"></i>
                         :<FontAwesomeIcon className={styles.icon} icon={faBookmark} />
                 }
                 </button>
