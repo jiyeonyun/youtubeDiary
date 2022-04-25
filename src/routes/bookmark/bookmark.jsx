@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/header';
-import { useSelector} from 'react-redux';
 import BookmarkItem from '../../components/bookmarkItem/bookmarkItem';
 import { collection,orderBy,getDocs,query,onSnapshot,doc } from "firebase/firestore";
 import { dbService } from '../../service/mybase';
-
+import styles from './bookmark.module.css';
 const Bookmark = ({authService,youtube}) => {
     const [list,setList] = useState([]);
 
@@ -23,12 +22,13 @@ const Bookmark = ({authService,youtube}) => {
             getVideo();
         }, []);
     console.log(list)
-    // let list = useSelector(state=>state);
     return(
         <div>
         <Header/>
-        { 
-            list.map((a)=>{
+        {
+            list.length === 0 
+            ? <div className={styles.null}><h4 className={styles.nullTitle}>저장된 비디오가 없습니다.</h4></div> 
+            : list.map((a)=>{
                 return( <BookmarkItem key={a.id} item={a} youtube={youtube} authService={authService}/>)
             })
         }
