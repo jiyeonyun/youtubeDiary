@@ -7,18 +7,15 @@
 <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
 <img src="https://img.shields.io/badge/Git hub-181717?style=flat-square&logo=Github&logoColor=white"/>
 <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=flat-square&logo=Yarn&logoColor=white"/>
+<img src="https://img.shields.io/badge/FireBase-FFCA28?style=flat-square&logo=FireBase&logoColor=white"/>
 <br>
 <img width="487" alt="main" src="https://user-images.githubusercontent.com/94913420/162649836-b2ea02b6-791c-489f-af24-194c0e9bbe98.png">
 
-<br>
-실행시 처음 나오는 화면 입니다.
-<br> <br>
 
  *** 
  
-간단한 가계부를 만들었습니다.<br>
-redux를 사용해 상태관리를 하였습니다.<br>
-
+ 매번 유튜브에서 유용한 내용이 있으면 캡쳐를 해두고 다시는 안봐서 기록하는 어플을 만들어보았습니다.<br>
+ 앞으로 추가할 내용은 날짜별 저장된 영상구분 카테고리별 구분을 업데이트 할 예정입니다.
 
 ## 상세 페이지
 
