@@ -2,7 +2,7 @@
   "name": "newreact",
   "version": "0.1.0",
   "private": true,
-  "homepage": " https://jiyeonyun.github.io/youtubeDiary/",
+  "homepage": "https://jiyeonyun.github.io/youtubeDiary/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",

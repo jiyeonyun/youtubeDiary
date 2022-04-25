@@ -8,7 +8,7 @@ function App({youtube,authService}) {
   return (
     <div className={styles.wrap}>
       <div className={styles.innerWrap}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route exact path='/' element={<Login authService={authService}/>} />
             <Route path='/home' element={<Home authService={authService} youtube={youtube}/>}/>
