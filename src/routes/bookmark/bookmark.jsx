@@ -6,6 +6,7 @@ import { dbService } from '../../service/mybase';
 import styles from './bookmark.module.css';
 const Bookmark = ({authService,youtube}) => {
     const [list,setList] = useState([]);
+    const reload = ()=> window.reload;
     const getVideo = async () => {
         const q = query(collection(dbService, "savedVideos"));
         const querySnapshot = await getDocs(q);
@@ -29,6 +30,7 @@ const Bookmark = ({authService,youtube}) => {
             : <ul className={styles.ul}>  {list.map((a)=>{return( <BookmarkItem key={a.id} item={a} youtube={youtube} authService={authService}/>)
             })} </ul>
         }
+        <button onClick={reload} className={styles.reload}></button>
         </div>
     );
 };
