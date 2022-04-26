@@ -3,12 +3,16 @@ import styles from './videoPlayer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown,faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faFilePen } from '@fortawesome/free-solid-svg-icons';
-import { faBookmark } from '@fortawesome/free-regular-svg-icons';
+import WriteModal from '../writeModal/writeModal';
 const VideoPlayer = ({video,video:{snippet}}) =>{
     const[des,setdes] = useState(false);
+    const[modal,setModal] = useState(false);
     const click = ()=>{
         setdes(!des);
     }
+    const openWirteModule = ()=>{
+        setModal(!modal);
+    };
     return(
         <section className={styles.detail}>
         <iframe
@@ -23,6 +27,7 @@ const VideoPlayer = ({video,video:{snippet}}) =>{
             ></iframe>
             <h2 className={styles.title}>{snippet.title}</h2>
             <h3 className={styles.channelTitle}>{snippet.channelTitle}</h3>
+            <button onClick={openWirteModule} className={styles.button}><FontAwesomeIcon icon={faFilePen}/></button>
             <button className={styles.button} onClick={click}>
                 {
                     des ?<FontAwesomeIcon icon={faArrowUp} />  :<FontAwesomeIcon icon={faArrowDown} />
@@ -30,6 +35,9 @@ const VideoPlayer = ({video,video:{snippet}}) =>{
             </button>
             {
                 des && <pre className={styles.description}>{snippet.description}</pre>
+            }
+            {
+                    modal && <div className={styles.modal}><WriteModal/></div>
             }
         </section>
     );

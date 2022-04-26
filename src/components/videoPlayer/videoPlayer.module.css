@@ -24,3 +24,11 @@
         transform: translateY(0px);
     }
 }
+.modal{
+    border: 1px solid;
+}
+.button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}

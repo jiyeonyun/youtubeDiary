@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePen } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { dbService } from '../../service/mybase';
-import {  deleteDoc, getFirestore, doc, collection, addDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import WriteModal from '../writeModal/writeModal';
 const Video = ({videoItem,onVideoClick}) => {
     const dispatch = useDispatch();
