@@ -1,11 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './writeModal.module.css';
 const WriteModal = ({WriteChange}) =>{
-    const textRef = useRef('');
+    const[inputVal,setInputVal] = useState('');
+    console.log(inputVal);
+    let write = inputVal;
     return(
         <div className={styles.modal}>
-            <textarea ref={textRef} className={styles.textArea} name="" id="" cols="30" rows="10"></textarea>
-            <button onClick={WriteChange}>go</button>
+            <input onChange={(e)=>setInputVal(e.target.value)} className={styles.textArea} name="" id="" cols="30" rows="10"></input>
+            <button onClick={WriteChange(write)}>go</button>
         </div>
     )
 };
