@@ -11,7 +11,7 @@ const Video = ({videoItem,onVideoClick}) => {
     const dispatch = useDispatch();
     const [modalOn,setModalOn] = useState(false);
     const[clicked,setClicked] = useState(false);
-    const[write,setWrite]=useState('');
+    const[write,setWrite]=useState([]);
     let length = 35; 
     let str = videoItem.snippet.title;
     const saveDatabase = async()=>{
@@ -36,11 +36,8 @@ const Video = ({videoItem,onVideoClick}) => {
             clicked:true,
         }})
     };
-    const onChange = (event)=>{
-        const{
-            target: {value},
-        } = event;
-        setWrite(value);
+    const WriteChange = (a)=>{
+        console.log('a');
     };
     const Modal = ()=>{
         setModalOn(!modalOn)
@@ -72,7 +69,7 @@ const Video = ({videoItem,onVideoClick}) => {
             {
                 modalOn && 
                 <div className={styles.modal}>
-                <WriteModal onChange={onChange}/>
+                    <WriteModal WriteChange={WriteChange}/>
                 </div>
             }
         </li>
