@@ -6,6 +6,7 @@ import { dbService } from '../../service/mybase';
 import styles from './bookmark.module.css';
 const Bookmark = ({authService,youtube}) => {
     const [list,setList] = useState([]);
+    const [del,setDel] = useState(false);
     const getVideo = async () => {
         const q = query(collection(dbService, "savedVideos"));
         const querySnapshot = await getDocs(q);
@@ -16,17 +17,17 @@ const Bookmark = ({authService,youtube}) => {
         }
         setList(prev => [videoObj, ...prev]);
         });
-        };
-        useEffect(() => {
+    };
+    useEffect(() => {
             getVideo();
-        }, []);
+        }, [del]);
     return(
         <div>
         <Header/>
         {
             list.length === 0 
             ? <div className={styles.null}><h4 className={styles.nullTitle}>저장된 비디오가 없습니다.</h4></div> 
-            : <ul className={styles.ul}>  {list.map((a)=>{return( <BookmarkItem key={a.id} item={a} youtube={youtube} authService={authService}/>)
+            : <ul className={styles.ul}>  {list.map((a)=>{return( <BookmarkItem key={a.id} item={a} youtube={youtube} authService={authService} setDel={setDel}/>)
             })} </ul>
         }
         </div>

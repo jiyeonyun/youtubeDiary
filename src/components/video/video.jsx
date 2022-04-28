@@ -8,10 +8,10 @@ import { dbService } from '../../service/mybase';
 import { collection, addDoc } from "firebase/firestore";
 import WriteModal from '../writeModal/writeModal';
 const Video = ({videoItem,onVideoClick}) => {
-    const dispatch = useDispatch();
     const [modalOn,setModalOn] = useState(false);
     const[clicked,setClicked] = useState(false);
     const[write,setWrite]=useState([]);
+    const dispatch = useDispatch();
     let length = 35; 
     let str = videoItem.snippet.title;
     const saveDatabase = async()=>{
@@ -22,6 +22,7 @@ const Video = ({videoItem,onVideoClick}) => {
             img:videoItem.snippet.thumbnails.medium.url,
             id: new Date(),
             write: write,
+            clicked:true,
         }
         await addDoc(collection(dbService,"savedVideos"),savedVideo);
     }

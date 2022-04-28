@@ -3,10 +3,11 @@ import { async } from '@firebase/util';
 import styles from './bookmarkItem.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment,faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { dbService,storageService } from '../../service/mybase';
 import { doc, deleteDoc, updateDoc }from"firebase/firestore";
-const BookmarkItem = ({item,youtube,authService}) => {
+import { useLocation } from 'react-router-dom';
+const BookmarkItem = ({item}) => {
+    let location = useLocation();
     let length = 30;
     const id = item.id
     const[click,setClick] = useState(false);
@@ -17,7 +18,9 @@ const BookmarkItem = ({item,youtube,authService}) => {
         const ok = window.confirm('이 비디오를 삭제 하시겠습니까?');
         if(ok){
             await deleteDoc(doc(dbService, "savedVideos", `${id}`));
+            window.location.reload();
         }
+        
     };
     return(
         <li className={styles.li}>
