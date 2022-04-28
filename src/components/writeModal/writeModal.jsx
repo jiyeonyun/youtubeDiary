@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import styles from './writeModal.module.css';
 const WriteModal = ({WriteChange}) =>{
     const[inputVal,setInputVal] = useState('');
-    console.log(inputVal);
     let write = inputVal;
     const click = (e)=>{
         e.stopPropagation();

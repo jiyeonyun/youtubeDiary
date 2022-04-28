@@ -39,7 +39,9 @@ const BookmarkItem = ({item,youtube,authService}) => {
                     click && 
                     <div>
                         <ul>
-                        <li>{item.write}</li>
+                        {item.write.map((i=>{
+                            return <li key={i}> {i} </li>
+                        }))}
                         </ul>
                     </div>
                 }

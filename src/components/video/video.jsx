@@ -38,6 +38,10 @@ const Video = ({videoItem,onVideoClick}) => {
     };
     const WriteChange = (a)=>{
         console.log(a);
+        let newWrite = [...write];
+        newWrite.push(a);
+        console.log(newWrite)
+        setWrite(newWrite);
     };
     const Modal = ()=>{
         setModalOn(!modalOn)
