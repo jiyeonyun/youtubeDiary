@@ -39,6 +39,11 @@
 }
 .img{
     width: 15rem;
+    background-image: url('/public/images/diary.jpeg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20rem;
 }
 .loginP{
     font-size: 0.9rem;

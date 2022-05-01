@@ -25,7 +25,7 @@ const Login = ({authService}) => {
             <Header/>
             <section className={styles.login}>
                 <div className={styles.loginImage}>
-                    <img className={styles.img} src="../Users/yunjiyeon/youtubeDiary/public/images/diary.jpeg" alt="" />
+                    <div className={styles.img}></div>
                     <p className={styles.loginP}>캡쳐대신 기록하고싶다면</p>
                     <h4 className={styles.lodinh4}>Youtube Diary</h4>
                 </div>
