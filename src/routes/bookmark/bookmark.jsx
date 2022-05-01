@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/header';
 import BookmarkItem from '../../components/bookmarkItem/bookmarkItem';
-import { collection,orderBy,getDocs,query,onSnapshot,doc } from "firebase/firestore";
+import { collection,getDocs,query } from "firebase/firestore";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { dbService } from '../../service/mybase';

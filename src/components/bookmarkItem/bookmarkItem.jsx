@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { async } from '@firebase/util';
+import React, { useState } from 'react';
 import styles from './bookmarkItem.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment,faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { dbService,storageService } from '../../service/mybase';
-import { doc, deleteDoc, updateDoc }from"firebase/firestore";
-import { useLocation } from 'react-router-dom';
+import { dbService } from '../../service/mybase';
+import { doc, deleteDoc }from"firebase/firestore";
 const BookmarkItem = ({item}) => {
-    let location = useLocation();
     let length = 30;
     const id = item.id
     const[click,setClick] = useState(false);

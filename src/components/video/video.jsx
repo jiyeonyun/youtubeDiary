@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import styles from './video.module.css';
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilePen } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
@@ -48,7 +48,7 @@ const Video = ({videoItem,onVideoClick}) => {
         setModalOn(!modalOn)
     }
     return(
-        <li value="li" className={styles.li} onClick={(e)=>e.target.value == undefined && onVideoClick(videoItem)}>
+        <li value="li" className={styles.li} onClick={(e)=>e.target.value === undefined && onVideoClick(videoItem)}>
             <div className={styles.liWrap}>
             <img className={styles.img} src={videoItem.snippet.thumbnails.medium.url} alt="" />
             <div value='button' className={styles.buttons}>

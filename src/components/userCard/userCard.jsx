@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './userCard.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOut  } from '@fortawesome/free-solid-svg-icons';
-import { faBookmark,faBook } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 const UserCard = ({name,photo,onLogout}) => {
     const navigator = useNavigate();
