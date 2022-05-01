@@ -9,8 +9,8 @@ const WriteModal = ({WriteChange}) =>{
     }
     return(
         <div className={styles.modal}>
-            <input onChange={(e)=>setInputVal(e.target.value)} className={styles.textArea} cols="30" rows="10"></input>
-            <button onClick={click}>go</button>
+            <input onChange={(e)=>setInputVal(e.target.value)} className={styles.textArea} cols="30" rows="10" autofocus></input>
+            <button onClick={click}>Enter</button>
         </div>
     )
 };
