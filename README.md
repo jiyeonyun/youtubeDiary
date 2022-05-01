@@ -1,5 +1,5 @@
 ## youtubeDiary 📝
-* https://jiyeonyun.github.io/cashmanager/
+* https://jiyeonyun.github.io/youtubeDiary/
 <br>↑ 배포사이트
 <br>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
