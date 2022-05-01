@@ -72,9 +72,10 @@ firebase인증을 사용하여 깃허브 또는 구글로 로그인 할 수 있�
 <br><br>
 <img width="475" alt="스크린샷 2022-05-01 오후 8 55 16" src="https://user-images.githubusercontent.com/94913420/166144683-26a0ef7a-a468-41ad-854f-c57d59127a9a.png">
 <br><br>
-
+리스트에서만 추가할수있었던 북마크 기능을 비디오 플레이어에서도 추가할수있게 수정했습니다. <br>
 <img width="480" alt="스크린샷 2022-05-01 오후 8 53 46" src="https://user-images.githubusercontent.com/94913420/166144684-bd4eada2-f648-431f-9934-9521e25f868b.png">
 <br><br>
+커멘트 작성시 모달창이 뜨는 기능을 추가했습니다 <br>
 
 +추가할기능 1.카테고리별로 나누기 ~~2.영상하단에서도 메모가능하게 만들기~~ 3. 저장된 날짜별로 나누기
 
