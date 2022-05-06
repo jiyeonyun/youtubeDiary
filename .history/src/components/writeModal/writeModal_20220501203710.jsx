@@ -6,11 +6,9 @@ const WriteModal = ({WriteChange}) =>{
     let write = inputVal;
     const click = (e)=>{
         e.stopPropagation();
+        WriteChange(write)
         setPopup(true);
         setTimeout(function(){setPopup(false);},1000);
-        if(inputVal !== ''){
-            WriteChange(write);
-        }
     }
     return(
         <div className={styles.modal}>
@@ -18,11 +16,7 @@ const WriteModal = ({WriteChange}) =>{
             <button onClick={click}>Enter</button>
             {
                 popup && <div className={styles.popup}>
-                            {
-                            inputVal==='' 
-                                ?<h3 className={styles.h3}>빈 코멘트 입니다</h3>
-                                : <h3 className={styles.h3}>코멘트가 저장되었습니다✅</h3>
-                            }
+                            <h3 className={styles.h3}>코멘트가 저장되었습니다✅</h3>
                         </div>
             }
         </div>

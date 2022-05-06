@@ -6,11 +6,9 @@ const WriteModal = ({WriteChange}) =>{
     let write = inputVal;
     const click = (e)=>{
         e.stopPropagation();
+        WriteChange(write)
         setPopup(true);
         setTimeout(function(){setPopup(false);},1000);
-        if(inputVal !== ''){
-            WriteChange(write);
-        }
     }
     return(
         <div className={styles.modal}>

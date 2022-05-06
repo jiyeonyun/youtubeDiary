@@ -9,7 +9,7 @@ const WriteModal = ({WriteChange}) =>{
         setPopup(true);
         setTimeout(function(){setPopup(false);},1000);
         if(inputVal !== ''){
-            WriteChange(write);
+            WriteChange(write)
         }
     }
     return(
